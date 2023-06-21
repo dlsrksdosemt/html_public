@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="UTP=8">  <!-- 문서의 문자 인코딩을 UTF-8로 설정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- 반응형 viewport 설정 -->
+    <link rel="stylesheet" href="style.css">  <!-- 외부 CSS 파일 연결 -->
+    <title>황상덕 미니갤러리</title> <!-- 페이지 제목을 황상덕 미니갤러리로 설정 -->
+</head>
+<body>
+    <div class="container">  <!-- 컨테이너 클래스 요소 설정 -->
+    
+    <div class="heading"> <!-- 헤딩 클래스 요소 설정 -->      
+    <h1>황상덕 미니 갤러리</h1> <!-- 주요 제목을 황상덕 미니 갤러리로 작성 -->
+    <h4><b>사나이 황상덕 유튜브 채널</b> <a href="https://www.youtube.com/@2023HWANG" target="_blank"><img src="images/22.png" width="140" height="36"></a></h4>  
+    </div>  <!-- 부제목을 사나이 황상덕 유튜브 채널로 작성하고 images22에 외부링크를 연결 -->
+    
+    <div class="video-container">  <!-- 비디오 컨테이너 클래스 요소 설정 -->
+    
+    <div class="video">
+    <video src="video1.mp4"></video>  <!-- video1.mp4 비디오 경로 태그 --> 
+    <a href="https://www.youtube.com/watch?v=bzi4LaYZZnU"><button>핸드폰을 바꿔야하는이유 <img src="images/11.png" width="40" height="27" class="img-11"></button></a></div>
+        <!-- 외부 링크로 연결된 버튼에 제목과 이미지11을 포함 -->
+    <div class="video">
+    <video src="video2.mp4" ></video> <!-- video2.mp4 비디오 경로 태그 --> 
+    <a href="https://www.youtube.com/shorts/dHeKepcKAQc"><button>사나이의 중간고사 <img src="images/11.png" width="40" height="27" class="img-11"></button></a></div>
+        <!-- 외부 링크로 연결된 버튼에 제목과 이미지11을 포함 -->
+    <div class="video">
+    <video src="video3.mp4" ></video> <!-- video3.mp4 비디오 경로 태그 --> 
+    <a href="https://www.youtube.com/watch?v=pifoRcupMs8"><button>사나이식 학교가기 <img src="images/11.png" width="40" height="27" class="img-11"></button></a></div>
+        <!-- 외부 링크로 연결된 버튼에 제목과 이미지11을 포함 -->
+    <div class="video">
+    <video src="video4.mp4" ></video> <!-- video4.mp4 비디오 경로 태그 --> 
+    <a href="https://www.youtube.com/shorts/4mPRab935-o"><button>사나이의 산책 <img src="images/11.png" width="40" height="27" class="img-11"></button></a></div>
+        <!-- 외부 링크로 연결된 버튼에 제목과 이미지11을 포함 -->
+    <div class="video">
+    <video src="video5.mp4" ></video> <!-- video5.mp4 비디오 경로 태그 --> 
+    <a href="https://www.youtube.com/watch?v=SIQ_3fu6sho&t=32s"><button>사나이의 휴일 <img src="images/11.png" width="40" height="27" class="img-11"></button></a></div>
+        <!-- 외부 링크로 연결된 버튼에 제목과 이미지11을 포함 -->
+    <div class="video">
+    <video src="video6.mp4" ></video> <!-- video6.mp4 비디오 경로 태그 --> 
+    <a href="https://www.youtube.com/shorts/jVrGhh5gkwo"><button>돔황챠!! <img src="images/11.png" width="40" height="27" class="img-11"></button></a></div>
+        <!-- 외부 링크로 연결된 버튼에 제목과 이미지11을 포함 -->
+    
+<script>
+var video = document.querySelectorAll('video')  //video 변수에 문서 내 모든 비디오 요소를 선택 
+
+video.forEach(play => play.addEventListener('click', () =>{  //forEach사용하여 각 비디오 요소에 클릭 이벤트 리스너를 추가하고 각 비디오 요소를 play로 지칭
+
+    play.classList.toggle('active'); //클릭시 play 요소의 active 클래스를 토글 
+
+    if(play.paused){
+        play.play();  //비디오 요소가 일시 정지된 상태라면 play() 메서드를 사용하여 비디오를 재생
+    }else{
+        play.pause();
+        play.currentTime = 0; //비디오가 재생 중인 상태인 경우, 비디오를 일시 정지하고 재생 시간을 처음으로 되돌림
+    }
+    
+}));
+
+</script>
+</body>
+</html>
